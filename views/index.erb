@@ -1,3 +1,26 @@
-<link rel="stylesheet" href="https://newcss.net/theme/night.css">
-<textarea></textarea>
-<a href="/__repl">Click here to view the source code</a>
+<h3>Why?</h3>
+<br>
+<p>Sometimes you need to convert a certificate in <mark>.pem</mark> format to a single line string so it can be transmitted as JSON.</p>
+<h3>Can't you do this with command line tools?</h3>
+<br>
+<p>Yes, but I wanted to make something using REPL.it for fun.</p>
+<h3>Paste your cert below</h3>
+<br>
+<p>Then clicky the button.</p>
+<div>
+  <form method="POST" action="/convert-form">
+    <p>
+      <textarea id="pem" name="pem" rows="40" cols="64"></textarea>
+    </p>
+    <input type="submit" value="Convert">
+  </form>
+</div>
+<h3>OR</h3>
+<p>Use curl like a real nerd.</p>
+<pre>curl --data-binary "@/path/to/cert.pem" https://pemtostring.gscho.repl.co/convert</pre>
+<br>
+<hr>
+<br>
+<footer>
+  <a href="/__repl">Click here to view the source code</a>
+</footer>
